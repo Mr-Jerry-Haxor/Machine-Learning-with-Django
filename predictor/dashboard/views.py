@@ -7,6 +7,12 @@ import joblib
 
 
 def index(request):
+    return render(request, 'home.html')
+
+def prediction(request):
+    return render(request, 'prediction.html')
+
+def bupa_liver(request):
     if request.method == 'POST':
         form = DataForm(request.POST)
         if form.is_valid():
